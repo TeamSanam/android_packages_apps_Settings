@@ -89,4 +89,24 @@
 
     </PreferenceCategory>
 
+        <ListPreference
+            android:key="hardware_keys_back_press"
+            android:dialogTitle="@string/hardware_keys_short_press_title"
+            android:title="@string/hardware_keys_short_press_title"
+            android:entries="@array/hardware_keys_action_entries"
+            android:entryValues="@array/hardware_keys_action_values"
+            android:persistent="false"
+            android:dependency="enable_hw_keys" />
+
+        <ListPreference
+            android:key="hardware_keys_back_long_press"
+            android:dialogTitle="@string/hardware_keys_long_press_title"
+            android:title="@string/hardware_keys_long_press_title"
+            android:entries="@array/hardware_keys_action_entries"
+            android:entryValues="@array/hardware_keys_action_values"
+            android:persistent="false"
+            android:dependency="enable_hw_keys" />
+
+    </PreferenceCategory>
+
 </PreferenceScreen>
