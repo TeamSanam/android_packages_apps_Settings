@@ -143,11 +143,14 @@ public class ButtonSettings extends SettingsPreferenceFragment implements
         final boolean hasAppSwitch = (mDeviceHardwareKeys & KEY_MASK_APP_SWITCH) != 0 || showNavBar;
         final boolean hasCamera = (mDeviceHardwareKeys & KEY_MASK_CAMERA) != 0;
 
+        Log.d(TAG, "showNavBarDefault: " + showNavBarDefault + " showNavBar: " + showNavBar + " hasHome: " + hasHome + " hasMenu: " + hasMenu + " hasBack: " + hasBack + " hasAppSwitch: " + hasAppSwitch);
+
         final PreferenceCategory homeCategory =
                 (PreferenceCategory) prefSet.findPreference(KEY_CATEGORY_HOME);
 
         if (hasHome && homeCategory != null) {
         /* Home Key Long Press */
+        Log.d(TAG, "Show home pref");
         int defaultLongPressOnHomeKeyBehavior = res.getInteger(
                 com.android.internal.R.integer.config_longPressOnHomeKeyBehavior);
         int longPressOnHomeKeyBehavior = Settings.System.getIntForUser(resolver,
